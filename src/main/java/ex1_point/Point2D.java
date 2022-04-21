@@ -1,10 +1,9 @@
+package ex1_point;
+
 public class Point2D {
-    private float x;
-    private float y;
+    protected float x, y;
 
     Point2D() {
-        x = 0f;
-        y = 0f;
     }
 
     Point2D(float x, float y) {
@@ -39,6 +38,6 @@ public class Point2D {
 
     @Override
     public String toString() {
-        return "(" + x + ", " + y + ")";
+        return String.format("(%f, %f)", x, y);
     }
 }
