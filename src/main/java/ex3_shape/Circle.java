@@ -3,7 +3,7 @@ package ex3_shape;
 public class Circle extends Shape {
     private float radius;
 
-    Circle() {
+    public Circle() {
         super();
         radius = 1;
     }

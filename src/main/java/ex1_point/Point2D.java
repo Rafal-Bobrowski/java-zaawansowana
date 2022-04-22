@@ -3,10 +3,10 @@ package ex1_point;
 public class Point2D {
     protected float x, y;
 
-    Point2D() {
+   public  Point2D() {
     }
 
-    Point2D(float x, float y) {
+    public Point2D(float x, float y) {
         this.x = x;
         this.y = y;
     }
