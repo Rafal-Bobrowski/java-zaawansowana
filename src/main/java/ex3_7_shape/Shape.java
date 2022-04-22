@@ -1,6 +1,6 @@
-package ex3_shape;
+package ex3_7_shape;
 
-public abstract class Shape {
+public abstract class Shape implements GeometricObject, Resizable {
     protected String color;
     protected boolean isFilled;
 
@@ -29,9 +29,6 @@ public abstract class Shape {
     public void setFilled(boolean filled) {
         isFilled = filled;
     }
-
-    public abstract float getArea();
-    public abstract float getPerimeter();
 
     @Override
     public String toString() {

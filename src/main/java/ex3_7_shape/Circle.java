@@ -1,4 +1,4 @@
-package ex3_shape;
+package ex3_7_shape;
 
 public class Circle extends Shape {
     private float radius;
@@ -17,6 +17,11 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
+    @Override
+    public void resize(int percent) {
+        this.radius *= (double)percent/100;
+    }
+
     public float getRadius() {
         return radius;
     }
@@ -26,13 +31,13 @@ public class Circle extends Shape {
     }
 
     @Override
-    public float getArea() {
-        return (float) (Math.PI * radius * radius);
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 
     @Override
-    public float getPerimeter() {
-        return (float) (2 * Math.PI * radius);
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package ex3_shape;
+package ex3_7_shape;
 
 public class Rectangle extends Shape {
     protected double width, length;
@@ -19,6 +19,12 @@ public class Rectangle extends Shape {
         this.length = length;
     }
 
+    @Override
+    public void resize(int percent) {
+        this.length *= (double)percent/100;
+        this.width *= (double)percent/100;
+    }
+
     public double getWidth() {
         return width;
     }
@@ -36,13 +42,13 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public float getArea() {
-        return (float) (width * length);
+    public double getArea() {
+        return (width * length);
     }
 
     @Override
-    public float getPerimeter() {
-        return (float) (2 * width + 2 * length);
+    public double getPerimeter() {
+        return (2 * width + 2 * length);
     }
 
     @Override
