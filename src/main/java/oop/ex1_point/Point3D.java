@@ -1,4 +1,4 @@
-package ex1_point;
+package oop.ex1_point;
 
 public class Point3D extends Point2D{
     private float z;

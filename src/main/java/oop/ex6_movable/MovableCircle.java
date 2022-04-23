@@ -1,6 +1,6 @@
-package ex6_movable;
+package oop.ex6_movable;
 
-import ex3_7_shape.Circle;
+import oop.ex3_7_shape.Circle;
 
 public class MovableCircle extends Circle implements Movable {
     private MovablePoint centerPoint;

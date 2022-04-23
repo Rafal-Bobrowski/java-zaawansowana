@@ -1,6 +1,6 @@
-package ex6_movable;
+package oop.ex6_movable;
 
-import ex1_point.Point2D;
+import oop.ex1_point.Point2D;
 
 public class MovablePoint extends Point2D implements Movable {
 

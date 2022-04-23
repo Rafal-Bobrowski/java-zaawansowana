@@ -1,4 +1,4 @@
-package ex6_movable;
+package oop.ex6_movable;
 
 public interface Movable {
     void moveUp();

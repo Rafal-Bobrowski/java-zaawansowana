@@ -1,4 +1,4 @@
-package ex3_7_shape;
+package oop.ex3_7_shape;
 
 public class Square extends Rectangle{
 

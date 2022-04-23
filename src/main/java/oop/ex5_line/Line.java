@@ -1,6 +1,6 @@
-package ex5_line;
+package oop.ex5_line;
 
-import ex1_point.Point2D;
+import oop.ex1_point.Point2D;
 
 public class Line {
     protected Point2D p1;

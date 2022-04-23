@@ -1,4 +1,4 @@
-package ex2_person;
+package oop.ex2_person;
 
 public class Person {
     protected String name;
