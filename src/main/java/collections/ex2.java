@@ -1,5 +1,6 @@
 package collections;
 
+import enumerators.ex2_package_size.PackageSize;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,8 +38,13 @@ public class ex2 {
         System.out.println(bookService.getBooks());
         System.out.println(bookService.findMostExpensiveBook());
         System.out.println(bookService.findCheapestBook());
-        System.out.println(bookService.sortByTitleDsc());
         System.out.println(bookService.sortByTitleAsc());
+        System.out.println(bookService.sortByTitleDsc());
+        System.out.println(bookService.mapBooks());
+
+        System.out.println(bookService.sortByPriceAsc());
+        System.out.println(bookService.createBookStack());
+
     }
 }
 
@@ -191,12 +197,33 @@ class BookService {
         return result;
     }
 
+    public Map<String, Genre> mapBooks(){
+        Map<String, Genre> booksMap = new HashMap<>();
+        for (Book book : books){
+            booksMap.put(book.getTitle(), book.getGenre());
+        }
+        return booksMap;
+    }
+
     private boolean isBookServiceEmpty() {
         return books.size() == 0;
     }
 
     public boolean isBookInService(Book book) {
         return books.contains(book);
+    }
+
+    public Stack<Book> createBookStack(){
+        Stack<Book> bookStack = new Stack<>();
+        for(Book book : books){
+            bookStack.push(book);
+        }
+        return bookStack;
+    }
+
+    public List<Book> sortByPriceAsc(){
+        books.sort(Comparator.comparingInt(Book::getPriceCents));
+        return books;
     }
 
     public List<Book> sortByTitleAsc() {
